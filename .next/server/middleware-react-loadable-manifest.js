@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"lib\\\\lead.ts -> @emailjs/browser":{"id":935,"files":["static/chunks/935.d31f273a0f0fd92d.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{\"lib\\\\lead.ts -> @emailjs/browser\":{\"id\":\"lib\\\\lead.ts -> @emailjs/browser\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_emailjs_browser_es_index_js.js\"]}}"

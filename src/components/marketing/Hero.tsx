@@ -32,7 +32,7 @@ export function Hero() {
   const words = HERO.title.split(" ");
 
   return (
-    <section className="relative overflow-hidden bg-primary text-content-inverse">
+    <section className="relative flex min-h-[calc(100svh-4rem)] items-center overflow-hidden bg-primary text-content-inverse">
       {/* Dark gradient base + cinematic glow */}
       <div
         aria-hidden
@@ -41,8 +41,8 @@ export function Hero() {
       />
       <GlowBackground variant="hero" />
 
-      <Container className="relative grid items-center gap-12 py-20 sm:py-24 lg:grid-cols-2 lg:gap-16 lg:py-32">
-        <div className="flex flex-col items-start gap-6">
+      <Container className="relative grid w-full items-center gap-8 py-10 lg:grid-cols-2 lg:gap-12 lg:py-12">
+        <div className="flex flex-col items-start gap-5">
           <motion.span
             className="inline-flex items-center gap-2 rounded-full border border-content-inverse/15 bg-content-inverse/5 px-3 py-1 text-caption font-medium uppercase tracking-wide text-accent-light"
             {...item(0)}
@@ -51,7 +51,7 @@ export function Hero() {
           </motion.span>
 
           {/* Word-by-word headline reveal */}
-          <h1 className="font-display text-display tracking-tight text-content-inverse">
+          <h1 className="font-display text-h1 font-semibold leading-[1.1] tracking-tight text-content-inverse lg:text-[2.75rem]">
             {words.map((word, i) =>
               prefersReduced ? (
                 <span key={`${word}-${i}`}>{word} </span>
@@ -74,7 +74,7 @@ export function Hero() {
           </h1>
 
           <motion.p
-            className="max-w-xl text-body leading-relaxed text-content-inverse/80 sm:text-lg"
+            className="max-w-xl text-body leading-relaxed text-content-inverse/80"
             {...item(4)}
           >
             {HERO.subtitle}

@@ -9,3 +9,4 @@ export { Input } from "./Input";
 export { Textarea } from "./Textarea";
 export { Select, type SelectOption } from "./Select";
 export { Accordion, type AccordionItem } from "./Accordion";
+export { StarRating } from "./StarRating";

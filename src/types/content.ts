@@ -41,7 +41,25 @@ export type Testimonial = {
   quote: string;
   name: string;
   role: string;
+  /** Star rating out of 5. */
+  rating: number;
+  /** Optional company or location shown under the name. */
+  detail?: string;
   isPlaceholder: boolean;
+};
+
+/** A short one-line review used in the scrolling marquee row. */
+export type ShortReview = {
+  quote: string;
+  name: string;
+  rating: number;
+  isPlaceholder: boolean;
+};
+
+/** A single trust/ratings statistic for the reviews summary row. */
+export type ReviewStat = {
+  label: string;
+  value: string;
 };
 
 /** A pricing tier. Prices are intentionally omitted until provided by client. */

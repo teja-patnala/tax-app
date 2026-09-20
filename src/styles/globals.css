@@ -25,6 +25,12 @@
     outline: 2px solid rgb(var(--color-accent));
     outline-offset: 2px;
   }
+
+  /* Offset anchored sections so the sticky header doesn't cover their tops
+     when navigating to hash links (e.g. /#reviews, /#how-it-works). */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
 }
 
 @layer components {
