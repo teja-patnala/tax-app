@@ -1,8 +1,9 @@
 import { Header, Footer } from "@/components/layout";
+import { WhatsAppButton } from "@/components/marketing";
 
 /**
- * Marketing (public website) layout: shared Header + Footer and a skip link.
- * Pages in this route group render between them as <main>.
+ * Marketing (public website) layout: shared Header + Footer, a skip link, and a
+ * floating WhatsApp action fixed to the bottom-right corner across all pages.
  */
 export default function MarketingLayout({
   children,
@@ -20,6 +21,7 @@ export default function MarketingLayout({
       <Header />
       <main id="main-content">{children}</main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

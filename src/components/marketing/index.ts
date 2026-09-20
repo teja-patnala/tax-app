@@ -12,3 +12,4 @@ export { ServiceCard } from "./ServiceCard";
 export { PageHero } from "./PageHero";
 export { ContactForm } from "./ContactForm";
 export { GlowBackground } from "./GlowBackground";
+export { WhatsAppButton } from "./WhatsAppButton";
