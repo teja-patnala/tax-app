@@ -1,0 +1,70 @@
+/**
+ * Design tokens — single source of truth for all visual values.
+ * Consumed by Tailwind via tailwind.config.ts.
+ *
+ * Colors are stored as raw RGB CHANNELS (e.g. "15 37 64"), not hex, so Tailwind
+ * can apply opacity modifiers like `bg-primary/10` via rgb(var(--token) / <alpha>).
+ * Do not hardcode raw colors/px/shadows in components; adjust tokens here.
+ */
+:root {
+  /* Brand */
+  --color-primary: 15 37 64; /* deep navy #0f2540 */
+  --color-primary-dark: 10 26 47; /* #0a1a2f */
+  --color-primary-light: 27 58 92; /* #1b3a5c */
+
+  --color-accent: 15 174 145; /* teal/emerald #0fae91 */
+  --color-accent-dark: 11 143 119; /* #0b8f77 */
+  --color-accent-light: 63 208 182; /* #3fd0b6 */
+
+  /* Surfaces & background */
+  --color-background: 247 249 251; /* #f7f9fb */
+  --color-surface: 255 255 255; /* #ffffff */
+  --color-surface-muted: 238 242 246; /* #eef2f6 */
+
+  /* Text */
+  --color-text: 15 26 42; /* #0f1a2a */
+  --color-text-muted: 91 107 127; /* #5b6b7f */
+  --color-text-inverse: 255 255 255; /* #ffffff */
+
+  /* Feedback */
+  --color-success: 18 161 80; /* #12a150 */
+  --color-warning: 199 119 0; /* #c77700 */
+  --color-danger: 214 69 69; /* #d64545 */
+  --color-info: 43 108 176; /* #2b6cb0 */
+
+  /* Borders */
+  --color-border: 226 232 240; /* #e2e8f0 */
+  --color-border-strong: 203 213 225; /* #cbd5e1 */
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows (soft, premium) */
+  --shadow-sm: 0 1px 2px rgba(15, 37, 64, 0.06);
+  --shadow-md: 0 6px 20px rgba(15, 37, 64, 0.08);
+  --shadow-lg: 0 18px 48px rgba(15, 37, 64, 0.12);
+
+  /* Layout */
+  --container-width: 1200px;
+  --container-gutter: 24px;
+
+  /* Motion (mirrors animation-guidelines.md) */
+  --duration-fast: 0.3s;
+  --duration-base: 0.5s;
+  --duration-slow: 0.7s;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Cinematic depth — dark gradient surfaces + accent glow (channel-based) */
+  --gradient-dark: linear-gradient(
+    160deg,
+    rgb(var(--color-primary-dark)) 0%,
+    rgb(var(--color-primary)) 55%,
+    rgb(var(--color-primary-light)) 100%
+  );
+  --glow-accent: rgb(var(--color-accent) / 0.25);
+  --glow-primary: rgb(var(--color-primary) / 0.25);
+}

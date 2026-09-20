@@ -1,0 +1,14 @@
+export { Hero } from "./Hero";
+export { TrustSection } from "./TrustSection";
+export { ServicesSection } from "./ServicesSection";
+export { HowItWorks } from "./HowItWorks";
+export { WhyChooseUs } from "./WhyChooseUs";
+export { TaxExpertise } from "./TaxExpertise";
+export { Testimonials } from "./Testimonials";
+export { FaqSection } from "./FaqSection";
+export { FinalCTA } from "./FinalCTA";
+export { SectionHeading } from "./SectionHeading";
+export { ServiceCard } from "./ServiceCard";
+export { PageHero } from "./PageHero";
+export { ContactForm } from "./ContactForm";
+export { GlowBackground } from "./GlowBackground";
