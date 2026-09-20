@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"lib\\\\lead.ts -> @emailjs/browser":{"id":935,"files":["static/chunks/935.d31f273a0f0fd92d.js"]}}';
