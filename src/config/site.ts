@@ -21,8 +21,15 @@ export const SITE = {
     height: 260,
     alt: "KronixTax — US Taxation Services",
   },
-  /** Canonical site URL. Override via NEXT_PUBLIC_SITE_URL. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.kronixtax.com",
+  /**
+   * Canonical site URL. Override via NEXT_PUBLIC_SITE_URL. Falls back to the
+   * production domain if the env var is unset OR empty (an empty string in
+   * Vercel would otherwise break `new URL()` / metadataBase).
+   */
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL && process.env.NEXT_PUBLIC_SITE_URL.trim()
+      ? process.env.NEXT_PUBLIC_SITE_URL.trim()
+      : "https://www.kronixtax.com",
   description:
     "Your trusted partner in US taxation services. Tax and accounting for individuals and businesses — from filing and bookkeeping to US business formation and ongoing compliance.",
   contact: {

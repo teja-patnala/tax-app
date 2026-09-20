@@ -17,8 +17,20 @@ const sora = Sora({
   display: "swap",
 });
 
+/**
+ * Resolve metadataBase safely — never let a bad/empty URL crash the build
+ * (Next calls new URL() during static generation of every page incl. 404).
+ */
+function resolveMetadataBase(): URL {
+  try {
+    return new URL(SITE.url);
+  } catch {
+    return new URL("https://www.kronixtax.com");
+  }
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE.url),
+  metadataBase: resolveMetadataBase(),
   title: {
     default: `${SITE.name} — ${SITE.tagline}`,
     template: `%s — ${SITE.name}`,
