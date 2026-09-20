@@ -1,5 +1,5 @@
 {
-  "name": "@tax-platform/web",
+  "name": "kronixtax-web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
