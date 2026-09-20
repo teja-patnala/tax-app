@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
-import { Section, Container, Heading, Text } from "@/components/ui";
+import { Section, Heading, Text } from "@/components/ui";
 import {
   PageHero,
   SectionHeading,
@@ -11,7 +11,6 @@ import {
   StaggerContainer,
   StaggerItem,
   Reveal,
-  ScaleIn,
 } from "@/components/animations";
 import { SITE } from "@/config/site";
 import {
